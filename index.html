@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>探偵の館 - パスワードページ</title>
+  <title>パスワードページ</title>
   <style>
     body {
       font-family: 'Georgia', serif;
@@ -78,14 +78,8 @@
 </head>
 <body>
   <div class="container">
-    <h1>探偵の館へようこそ</h1>
-    <h2>事件の真相を知りたいあなたへ</h2>
-    <div class="detective">「パスワードが謎を解く鍵です。」<br>― 名探偵ホームズ &amp; ポアロ</div>
-    <input type="password" id="password" placeholder="パスワードを入力">
-    <br>
     <button onclick="checkPassword()">真相を暴く</button>
     <div id="error" class="error"></div>
-    <div class="footer">© 探偵倶楽部</div>
   </div>
   <script>
     function checkPassword() {
@@ -96,7 +90,7 @@
       if (input === correctPassword) {
         window.location.href = "secret.html";
       } else {
-        document.getElementById('error').textContent = "パスワードが違います。事件の鍵をもう一度…";
+        document.getElementById('error').textContent = "パスワードが違います。";
       }
     }
   </script>
