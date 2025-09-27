@@ -86,7 +86,7 @@
 </head>
 <body>
   <div class="container">
-    <input type="password" id="password" placeholder="パスワードを入力">
+    <input type="text" id="password" placeholder="犯人の名前をカタカナで入力">
     <button onclick="checkPassword()">真相を暴く</button>
     <div id="error" class="error"></div>
   </div>
@@ -98,7 +98,7 @@
       if (input === correctPassword) {
         window.location.href = "secret.html";
       } else {
-        document.getElementById('error').textContent = "パスワードが違います。";
+        document.getElementById('error').textContent = "推理が間違っているようです。";
       }
     }
   </script>
