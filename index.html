@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>パスワードページ</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
+    input[type="password"] { padding: 5px; font-size: 1em; }
+    button { padding: 6px 12px; font-size: 1em; }
+    .error { color: red; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>パスワードを入力してください</h1>
+  <input type="password" id="password" placeholder="パスワード">
+  <button onclick="checkPassword()">送信</button>
+  <div id="error" class="error"></div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      // ↓パスワードはここで変更できます
+      const correctPassword = "friend";
+
+      if (input === correctPassword) {
+        window.location.href = "secret.html";
+      } else {
+        document.getElementById('error').textContent = "パスワードが違います";
+      }
+    }
+  </script>
+</body>
+</html>
